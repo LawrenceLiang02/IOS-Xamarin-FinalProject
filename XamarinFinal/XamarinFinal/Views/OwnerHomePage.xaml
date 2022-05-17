@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:XamarinFinal.Views"
+             x:Class="XamarinFinal.Views.OwnerHomePage"
+            NavigationPage.HasBackButton="False" NavigationPage.HasNavigationBar="True">
+    
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="LOG OUT" Command="{Binding LogOutCommand}">
+        </ToolbarItem>
+    </TabbedPage.ToolbarItems>
+
+    <local:ViewOwnerpage Title="Owners" />
+    <local:CreateOwnerPage Title="Create"/>
+    <!--<local:DeleteOwnerPage Title="Delete"/>
+    <local:UpdateOwnerPage Title="Update"/>-->
+
+</TabbedPage>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Views.ViewPetsPage"
+             xmlns:viewmodel="clr-namespace:XamarinFinal.ViewModels">
+    
+    <ContentPage.Content>
+        <RefreshView
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            Command="{Binding RefreshCommand}"
+            RefreshColor="Red"
+            >
+            <ScrollView Orientation="Vertical">
+                <FlexLayout BindableLayout.ItemsSource="{Binding Items}"
+                        JustifyContent="SpaceBetween"
+                    AlignItems="Start"
+                    AlignContent="Start"
+                    Direction="Row"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Padding="10,50,10,10">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame WidthRequest="150" HeightRequest="150" CornerRadius="20" BackgroundColor="#2196F3">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Name: " FontSize="Body" FontAttributes="Bold"/>
+                                        <Label Text="{Binding name }" FontSize="Body" VerticalTextAlignment="End"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Birth Date: " FontSize="14" FontAttributes="Bold"/>
+                                        <Label Text="{Binding birthDate }" FontSize="14" VerticalTextAlignment="End"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Type: " FontSize="Body" FontAttributes="Bold"/>
+                                        <Label Text="{Binding type.name }" FontSize="Body" VerticalOptions="End"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                    <BindableLayout.EmptyView>
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <!--                            <Image Source="movieplaceholder.png"
+                               WidthRequest="200"
+                               HeightRequest="300"/>-->
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               Padding="20"
+                               Text="This person has no pets ¯\_(ツ)_/¯"
+                                   FontSize="Title"
+                               TextColor="Black"/>
+                        </StackLayout>
+                    </BindableLayout.EmptyView>
+                </FlexLayout>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

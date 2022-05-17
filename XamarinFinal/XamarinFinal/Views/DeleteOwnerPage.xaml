@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Views.DeleteOwnerPage">
+    <ContentPage.Content>
+        <RefreshView
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            Command="{Binding RefreshCommand}"
+            RefreshColor="Red"
+            >
+            <StackLayout>
+
+                <CollectionView
+                    ItemsSource ="{Binding Items}"
+                    SelectionMode="Single"
+                    SelectedItem="{Binding SelectedOwner}"
+                    SelectionChangedCommand="{Binding OwnerSelectionCommand}"
+                >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Frame Margin="0,0,0,0"
+                                   Padding="0"
+                                   CornerRadius="10"
+                                   HorizontalOptions="StartAndExpand"
+                                   IsClippedToBounds="True"
+                                   BackgroundColor="LightGray"
+                                   WidthRequest="500">
+                                    <StackLayout Orientation="Vertical">
+                                        <StackLayout Orientation="Horizontal"
+                                                     Padding="10,10,10,10">
+                                            <Label TextColor="Black" 
+                                                   FontSize="20" 
+                                                   Text="Name: "
+                                                   FontAttributes="Bold"/>
+                                            <Label TextColor="Black" 
+                                                   FontSize="20" 
+                                                   Text="{Binding firstName}"/>
+                                            <Label
+                                                   TextColor="Black" 
+                                                   FontSize="20" 
+                                                   Text="{Binding lastName}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal"
+                                                     Padding="10,10,10,10">
+                                            <Label TextColor="Black" 
+                                                   FontSize="20" 
+                                                   Text="Address: "
+                                                   FontAttributes="Bold"/>
+                                            <Label TextColor="Black" 
+                                                   FontSize="20" 
+                                                   Text="{Binding address}"/>
+                                            <Label
+                                                   TextColor="Black" 
+                                                   FontSize="20" 
+                                                   Text="{Binding city}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.EmptyView>
+                        <StackLayout HorizontalOptions="Center">
+                            <!--                            <Image Source="movieplaceholder.png"
+                               WidthRequest="200"
+                               HeightRequest="300"/>-->
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                               Padding="20,10,10,10"
+                               Text="Can't find any data, please reload the page!"
+                               TextColor="Gray"/>
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+                </CollectionView>
+            </StackLayout>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

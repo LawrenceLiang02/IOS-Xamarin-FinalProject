@@ -1,0 +1,1 @@
+E:\CEGEP\XamarinFinal\XamarinFinal\XamarinFinal.UWP\XamarinFinal.UWP.csproj;x64

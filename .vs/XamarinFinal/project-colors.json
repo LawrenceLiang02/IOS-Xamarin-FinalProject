@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c47aaf30-d2bb-49f2-a43f-5278b507ed77": {
+      "ProjectGuid": "c47aaf30-d2bb-49f2-a43f-5278b507ed77",
+      "DisplayName": "XamarinFinal",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "c70ac2aa-4aa4-49c3-afcc-6ec677e693bb": {
+      "ProjectGuid": "c70ac2aa-4aa4-49c3-afcc-6ec677e693bb",
+      "DisplayName": "XamarinFinal.Android",
+      "ColorIndex": 1
+    },
+    "90861cb2-1aa9-4198-9465-3e7b73f89c7a": {
+      "ProjectGuid": "90861cb2-1aa9-4198-9465-3e7b73f89c7a",
+      "DisplayName": "XamarinFinalTest",
+      "ColorIndex": 2
+    },
+    "a478bde1-8d2e-411a-a70e-7e9e72d0cbb3": {
+      "ProjectGuid": "a478bde1-8d2e-411a-a70e-7e9e72d0cbb3",
+      "DisplayName": "XamarinFinalTests",
+      "ColorIndex": 3
+    },
+    "1ae3f82f-34b7-468f-a217-5f1a83a5009c": {
+      "ProjectGuid": "1ae3f82f-34b7-468f-a217-5f1a83a5009c",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 4
+    },
+    "54b6f35e-dfae-4a6f-8919-5a8f067b17c4": {
+      "ProjectGuid": "54b6f35e-dfae-4a6f-8919-5a8f067b17c4",
+      "DisplayName": "Tests",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

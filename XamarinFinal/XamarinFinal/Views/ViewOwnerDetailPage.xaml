@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFinal.Views.ViewOwnerDetailPage"
+             xmlns:viewmodels="clr-namespace:XamarinFinal.ViewModels"
+             x:DataType="viewmodels:ViewOwnerDetailViewModel">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     VerticalOptions="Start"
+                     HorizontalOptions="CenterAndExpand"
+                     Padding="20">
+            <StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="First Name: " FontAttributes="Bold" FontSize="25" />
+                    <Label Text="{Binding SelectedOwner.firstName} " FontAttributes="None" FontSize="25" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Last Name: " FontAttributes="Bold" FontSize="25" />
+                    <Label Text="{Binding SelectedOwner.lastName} " FontAttributes="None" FontSize="25" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Address: " FontAttributes="Bold" FontSize="25" />
+                    <Label Text="{Binding SelectedOwner.address} " FontAttributes="None" FontSize="25"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="City: " FontAttributes="Bold" FontSize="25" />
+                    <Label Text="{Binding SelectedOwner.city} " FontAttributes="None" FontSize="25"/>
+                </StackLayout>
+            </StackLayout>
+            <Label></Label>
+            <Button Text="Pets" Style="{StaticResource RoundButton}" BackgroundColor="Green" Command="{Binding ViewPetsCommand}"/>
+
+            <Button Text="UPDATE" Style="{StaticResource RoundButton}" BackgroundColor="#2196F3" Command="{Binding UpdateOwnerCommand}"/>
+            <Button Text="DELETE" Style="{StaticResource RoundButton}" BackgroundColor="Red" Command="{Binding DeleteOwnerCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
